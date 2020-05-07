@@ -1,0 +1,46 @@
+body{
+    background-color: #AFA98D;
+    color: #016FB9;
+}
+button{
+    border-radius: 15px;
+    color: #016FB9;
+    background-color: brown;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 40px;
+}
+div{
+    background-color: transparent;
+    width: fit-content;
+}
+
+
+
+
+
+.grid-container{
+    width: auto;
+    max-width: 2000px;
+    margin: 10px auto;
+    display: grid;
+    grid-auto-rows: auto;
+    column-gap: 10px;
+    grid-template-columns:1fr
+}
+
+@media (min-width: 600px) and (max-width: 1023.9px) {
+    .grid-container{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
