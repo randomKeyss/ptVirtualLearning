@@ -7,7 +7,7 @@ function successFunc(data) {
             b.innerText = data[i]["Subject"].split().join("&nbsp");
             b.setAttribute("onclick", `location.href='${data[i]["Zoom Link"]}'`);
             b.setAttribute("type", "button");
-            document.querySelectorAll("div")[0].appendChild(b);
+            document.querySelectorAll("div")[1].appendChild(b);
         }
     }
   }
