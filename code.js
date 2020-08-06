@@ -1,25 +1,21 @@
-
-
-
-
 function successFunc(data) {
     data = data.sheet1;
-    console.log(data);
-    console.log(data[0].isTutoring);
+
     for(var i = 0; i<data.length;i++){
-        
-        if(data[i] && data[i].isTutoring){
-            console.log(i);
-            var b = document.createElement("button");
-            b.innerText = data[i].subject.split().join("&nbsp");
+        if(data[i] && (data[i].isTutoring || data[i].isTutoring===false)){
+          var b = document.createElement("button");
+            b.innerText = data[i].subject.split().join("&nbsp").toUpperCase();
             b.setAttribute("onclick", `location.href='${data[i].zoomLink}'`);
             b.setAttribute("type", "button");
-            document.querySelectorAll("div")[1].appendChild(b);
+          if(data[i].isTutoring === true){
+            document.getElementsByClassName("grid-container")[0].appendChild(b);
+          }else if(data[i].isTutoring === false){
+            document.getElementsByClassName("grid-container")[1].appendChild(b);
+          }
         }
     }
 }
 
-console.log("HIHIHIHHIIMDAVID")
 var request = new XMLHttpRequest();
 request.open('GET', 'https://v2-api.sheety.co/b0b9b67f97e5f0def33bc752f16ead7d/ptVirtualTutoring/sheet1', true);
 
