@@ -1,7 +1,7 @@
 function successFunc(data) {
     data = data.sheet1;
     for(var i = 0; i<data.length;i++){
-        if(data[i] && (data[i].isTutoring || data[i].isTutoring===false)){
+        if(data[i]){
           var b = document.createElement("button");
             b.innerText = data[i].subject.split().join("&nbsp");
             b.setAttribute("onclick", `location.href='${data[i].zoomLink}'`);
