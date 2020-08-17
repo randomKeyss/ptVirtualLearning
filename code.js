@@ -6,11 +6,7 @@ function successFunc(data) {
             b.innerText = data[i].subject.split().join("&nbsp");
             b.setAttribute("onclick", `location.href='${data[i].zoomLink}'`);
             b.setAttribute("type", "button");
-          if(data[i].isTutoring === true){
-            document.getElementsByClassName("grid-container")[0].appendChild(b);
-          }else if(data[i].isTutoring === false){
-            document.getElementsByClassName("grid-container")[1].appendChild(b);
-          }
+          document.getElementsByClassName("grid-container")[0].appendChild(b);
         }
     }
 }
