@@ -1,4 +1,4 @@
-function successFunc(data) {
+/*function successFunc(data) {
     data = data.sheet1;
     for(var i = 0; i<data.length;i++){
         if(data[i]){
@@ -29,4 +29,4 @@ request.onerror = function() {
   // There was a connection error of some sort
 };
 
-request.send();
+request.send();*/
