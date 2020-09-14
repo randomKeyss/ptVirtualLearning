@@ -33,6 +33,7 @@ button{
     letter-spacing: 2px;
     font-size: 25px;
     transition:background-color 0.5s;
+    cursor: pointer;
 }
 button:hover {
   background-color:#e3e3e3;
